@@ -3,7 +3,7 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     public static HealthManager Instance { get; private set; }
-    public static int Health { get; private set; }
+    public int Health { get; private set; } = 3;
 
     private void Awake()
     {
@@ -26,10 +26,4 @@ public class HealthManager : MonoBehaviour
         Health -= amount;
         //Debug.Log("Score: " + Score);
     }
-
-    public void RetartHealth()
-    {
-        Health = 3;
-    }
-
 }

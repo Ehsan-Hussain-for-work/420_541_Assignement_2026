@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TrapTrigger : MonoBehaviour
 {
+    [SerializeField] private int points = 1;
     public Transform respawnPoint;
 
     void OnTriggerEnter(Collider other)
@@ -9,7 +10,7 @@ public class TrapTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.position = respawnPoint.position;
-            HealthManager.Instance.RemoveHealth(1);
+            HealthManager.Instance.RemoveHealth(points);
         }
     }
 }

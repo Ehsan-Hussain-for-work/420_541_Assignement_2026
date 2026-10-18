@@ -17,7 +17,7 @@ public class HUDController : MonoBehaviour
     private void UpdateHealth()
     {
         // The Score property from Lab 4: anyone can read it
-        hearthText.text = "Hearths x" + HealthManager.Instance.Hearths;
+        hearthText.text = "Hearths x" + HealthManager.Instance.Health;
     }
 
     private void UpdateScore()
