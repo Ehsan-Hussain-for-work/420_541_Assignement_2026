@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 551401071}
   - component: {fileID: 551401070}
   - component: {fileID: 551401069}
+  - component: {fileID: 551401074}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -294,7 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f661545b3652ccc4fbd0995c604a1e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  respawnPoint: {fileID: 501166031}
 --- !u!65 &551401070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -388,6 +388,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &551401074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551401068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb06c976b29543f4b98fe5f59b29e8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  points: 1
+  respawnPoint: {fileID: 501166031}
 --- !u!1 &575013648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6799155194134901007, guid: e3fe52d757dbacb43a943a5d311369b8, type: 3}
@@ -502,6 +516,7 @@ GameObject:
   - component: {fileID: 752223205}
   - component: {fileID: 752223204}
   - component: {fileID: 752223203}
+  - component: {fileID: 752223206}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -604,6 +619,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752223201}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &752223206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752223201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649a30a32a1ce1e4eae4906c2f3ff215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelEndTrigger
+  endSceneName: EndScene
 --- !u!1 &1036613204
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596365006}
   - component: {fileID: 1596365007}
+  - component: {fileID: 1596365008}
   m_Layer: 0
   m_Name: LevelEnd
   m_TagString: Untagged
@@ -975,6 +1004,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5bf6f0e89ccfb44ba7458be7d877e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &1596365008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596365005}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649a30a32a1ce1e4eae4906c2f3ff215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   endSceneName: EndScene
@@ -1101,6 +1142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870767147}
   - component: {fileID: 1870767146}
+  - component: {fileID: 1870767148}
   m_Layer: 0
   m_Name: HeathManager
   m_TagString: Untagged
@@ -1135,6 +1177,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1870767148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870767145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4324383399be3f1429464b8e05d2ed6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!4 &1933209435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6643060880123043649, guid: 1dcde4e7f11541044ac45a5b849ee512, type: 3}
