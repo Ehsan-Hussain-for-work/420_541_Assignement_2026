@@ -109,7 +109,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
   m_Height: 2
@@ -127,7 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649a30a32a1ce1e4eae4906c2f3ff215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelEndTrigger
-  endSceneName: EndScene
+  sceneName: EndScene
+  deathCondition: 0
 --- !u!1 &3688709165059859121
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5450384460467450410}
   - component: {fileID: 2528646748181425000}
+  - component: {fileID: 8250961696500841768}
   m_Layer: 0
   m_Name: LevelEnd
   m_TagString: Untagged
@@ -172,5 +174,29 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 649a30a32a1ce1e4eae4906c2f3ff215, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  endSceneName: EndScene
+  m_EditorClassIdentifier: Assembly-CSharp::LevelEndTrigger
+  sceneName: EndScene
+  deathCondition: 0
+--- !u!136 &8250961696500841768
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688709165059859121}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

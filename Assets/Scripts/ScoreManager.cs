@@ -22,6 +22,16 @@ public class ScoreManager : MonoBehaviour
         //Debug.Log("Score: " + Score);
     }
 
+    public void RemoveScore(int amount)
+    {
+        Score -= amount;
+        if (Score < 0)
+        {
+            Score = 0;
+        }
+        //Debug.Log("Score: " + Score);
+    }
+
     public void SaveFinalScore()
     {
         FinalScore = Score;
