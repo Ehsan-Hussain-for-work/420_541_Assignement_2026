@@ -14,6 +14,11 @@ public class ScoreManager : MonoBehaviour
             return;
         }
         Instance = this;
+
+        if (FinalScore != 0)
+        {
+            Score = FinalScore;
+        }
     }
 
     public void AddScore(int amount)
@@ -37,4 +42,9 @@ public class ScoreManager : MonoBehaviour
         FinalScore = Score;
     }
 
+    public void Remove()
+    {
+        FinalScore = 0;
+        Instance = null;
+    }
 }

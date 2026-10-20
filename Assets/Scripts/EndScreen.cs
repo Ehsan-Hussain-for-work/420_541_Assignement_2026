@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
- 
+
 // Shows the score the player finished the level with.
 public class EndScreen : MonoBehaviour
 {
@@ -13,5 +13,6 @@ public class EndScreen : MonoBehaviour
         // No ScoreManager object exists in this scene, but we can
         // still read the static FinalScore through the class name
         scoreText.text = "Final Score: " + ScoreManager.FinalScore;
+        ScoreManager.Instance.Remove();
     }
 }
