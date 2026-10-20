@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     // Multiplies the normal speed. 1 = normal, 1.5 = 50% faster.
     // Other scripts (like PlayerPowerUps) are allowed to change it.
+    public bool JumpMultiplier { get; set; } = false;
+
     public float SpeedMultiplier { get; set; } = 1f;
 
     private void Start()
@@ -127,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
     public bool TryDoubleJump()
     {
         // Not allowed on the ground, or if it was already used
-        if (isGrounded || hasDoubleJumped) return false;
+        if (isGrounded || hasDoubleJumped || !JumpMultiplier) return false;
 
         doubleJumpRequested = true;
         hasDoubleJumped = true;
